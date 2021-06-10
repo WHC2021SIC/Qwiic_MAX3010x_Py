@@ -81,8 +81,9 @@ def runExample():
 	else:
 		print("Setup complete.")
 
-	sensor.setPulseAmplitudeRed(0x0A) # Turn Red LED to low to indicate sensor is running
-	sensor.setPulseAmplitudeGreen(0) # Turn off Green LED
+	# Disable MAX10105-specific function calls
+	# sensor.setPulseAmplitudeRed(0x0A) # Turn Red LED to low to indicate sensor is running
+	# sensor.setPulseAmplitudeGreen(0) # Turn off Green LED
 
 	RATE_SIZE = 4 # Increase this for more averaging. 4 is good.
 	rates = list(range(RATE_SIZE)) # list of heart rates
